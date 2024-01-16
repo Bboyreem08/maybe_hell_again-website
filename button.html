@@ -1,0 +1,95 @@
+<html>
+<body>
+<p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
+<button onclick="document.getElementById('myImage').src='bamba.jpg'">paris in the night</button>
+<img style="width:400px;" id="myImage" src="bamba.jpg" style="width:100px">
+<button onclick="document.getElementById('myImage').src='bamba2.jpg'">paris in the morning</button>
+<button onclick="myFunction()">a very importent question</button>
+<button onclick="document.getElementById('potato').src='potato.jpeg'">karma</button>
+<img  id="potato">
+</br>
+<button onclick="keypressevent()">press to make it glow</button>
+<button onclick='document.getElementById("input1").style.color= "red"'>press to change the color of the text</button>
+<input type="text" id="input1" onkeydown="keypressevent()"/>
+</br>
+whats the username:<input type="text" id="input2">
+whats the password your entering:<input type="password" id="password"/>
+<p id="showinputhere"></p>
+<button onclick="displayMessage()">click to check whats the username</button>
+<button onclick="thepassword()">click to see what password you have enterd</button>
+<p id="boom"></p>
+<button onclick="passwordmaybe()">check with inbox</button>
+<button onclick="passwordsecond()">check with alert</button>
+<a href="https://mail.google.com/mail/u/0/#inbox" id="1"></a>
+<button onclick="changepassword()">press to choose the password</button>
+<p id="demo"></p>
+<button onclick="dugma()">bla</button>
+<script>
+var yes="boom";
+var y="";
+var i=false;
+var c="";
+function myFunction() {
+  if (confirm("do you want to see a potato")==true)
+  document.getElementById('potato').src='potato.jpeg' 
+}
+window.alert("reem is a nerd");
+function keypressevent(){
+if (i!=true){
+alert("this is a test")
+}
+i=true;
+document.getElementById("input1").style.background="aqua";
+document.getElementById("input1").style.textDecoration="underline";
+}
+function displayMessage(){
+var x = document.getElementById("input2").value
+if (x){
+document.getElementById("showinputhere").innerHTML = x;
+}
+}
+function thepassword(){
+y = document.getElementById("password").value;
+document.getElementById("boom").innerHTML = y;
+}
+function passwordmaybe(){
+y=document.getElementById("password").value;
+if (y==(yes)){
+window.alert("thats the password")
+c=true;
+}
+else{
+window.alert("that is not it you imposter!!!")
+c=false;
+}
+if (c==true){
+ window.open("http://www.google.com",'_blank');
+	}
+if (c==false){
+document.getElementById("demo").innerHTML=("stop there you imposter i shall send you to jail")}
+}
+function passwordsecond(){
+y=window.prompt("whats the password");
+if (y==(yes)){
+window.alert("thats the password")
+c=true
+}
+else{
+window.alert("that is not it you imposter!!!")
+c=false
+}
+
+if (c==true){
+ window.open("https://mail.google.com/mail/u/0/#inbox",'_blank');
+	}
+if (c==false){
+window.open("https://en.wikipedia.org/wiki/Prison",'_blank')}
+}
+function changepassword(){
+yes=window.prompt("what do you want the password to be")
+}
+function dugma(){
+document.getElementById("demo").innerHTML=("whatever")}
+</script>
+</body>
+</html>
